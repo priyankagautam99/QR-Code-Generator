@@ -4,11 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qr code generator</title>
+
+    <style>
+        body,html{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .container{
+            background-color: black;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .box{
+            background-color: #333;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        h2{
+            font-size: 200%;
+            color: cornflowerblue;
+        }
+        button{
+            border-radius: 20px;
+            width: 200px;
+            height: 50px;
+            background-color: sandybrown;
+            border: 2px solid cornflowerblue;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+        input{
+            background-color: floralwhite;
+            width: 200px;
+            height: 50px;
+            border-radius: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h2>QR Code Generator</h2>
-    <input type="text" id ="inputtext" placeholder="Enter URL or Text"><br><br>
-    <button onclick="generate()">Generator QR</button><br><br>
+    <div class="container">
+        <div class="box">
+            <h2>Qr code generator</h2>
+            <input type="text" placeholder="Enter text" id="inputtext"><br><br>
+            <button onclick="generate()">Generate</button>
+        </div><br><br>
     <img src="" id="imgqr"><br><br>
 
     <script>
